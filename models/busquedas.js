@@ -80,6 +80,7 @@ export default class Busquedas {
     if (this.historial.includes(lugar.toLocaleLowerCase())) {
       return;
     }
+    this.historial = this.historial.splice(0, 5);
 
     this.historial.unshift(lugar.toLocaleLowerCase());
 
